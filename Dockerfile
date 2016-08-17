@@ -1,6 +1,8 @@
 #creates apache container and adds html file
 FROM ubuntu:14.04
+RUN apt-get update
 RUN apt-get install -y apache2 curl
+
 ADD index.html /var/www/html/
 VOLUME /var/www/html/
 
